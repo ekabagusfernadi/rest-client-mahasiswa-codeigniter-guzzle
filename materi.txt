@@ -1,0 +1,16 @@
+. buat .htaccess diluar, lalu pastekan kodenya untuk menghilangkan index.php
+. tulis base_url() di config/config
+. hapus index.php di config/config/$config['index_page'] = '';
+. tentukan halaman home/controller default di config/routes
+. hati2 dengan berbagai macam fitur yang perlu load modul
+
+. form_validation
+. ubah pesan error form_validation
+. session->set_flashdata
+. tambah data
+. hapus data
+
+. detail
+. perbedaan base_url() dan site_url(), jika dikonfigurasi tidak menghilangkan index.php di urlnya(config/config/$config['index_page'] = '';) maka untuk site_url() akan ditulis, sedangkan untuk base_url() tetap tidak ditulis.. lebih baik gunakan yang base_url()
+. function validation_errors(); = menampilkan semua, untuk menampilkan satu2 per input gunakan form_error("nama_input");
+. form select php tidak bisa diisi langsung pakai value="" harus dilooping, kemudian diberi kondisi jika option = $mahasiswa["jurusan"] maka diberi selected
